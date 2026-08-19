@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Bài 2</title>
+    </head>
+    <body>
+        <h1>Bài 2</h1>
+        <div> 
+            <!-- Chỉ số trên -->
+            x<sup>2</sup>
+            <br>
+            <!-- Chỉ số dưới  -->
+            H<sub>2</sub>O
+        </div>
+
+        <div> 
+            <!-- img ảnh-->
+             <img src="pn.jpg" width="200" height="200">
+             <br>
+             <!-- Tạo 1 folder tên là anh, copy ảnh vào folder anh và nhập ảnh từ folder anh để xem ảnh -->
+             <img src="../anh/pn.jpg">
+        </div>
+
+        <div>
+            <!-- Liên kết link -->
+             <a href="../bai1/index.html">Xem bài 1</a>
+             <br>
+             <a href="https://www.humg.edu.vn/Pages/home.aspx">
+                Liên kết đến trang HUMG
+             </a>
+        </div>
+
+        <div>
+            <!-- Tạo bảng là table -->
+            <!-- Dòng kẻ là border -->
+            <!-- Định nghĩa tiêu đề bảng là caption -->
+             <table border="1">
+                <caption>Danh sách sinh viên</caption>
+                <!-- Định nghĩa hàng là tr 
+                     Định nghĩa cột là td
+                     Định nghĩa tiêu đề cột là th-->
+                <tr>
+                    <th>STT</th>
+                    <!-- Colspan là gộp các cột có thông tin giống nhau -->
+                    <th colspan="2">Họ và tên</th>
+                    <th>MSSV</th>
+                    <th>Lớp</th>
+                    <th>Khoá</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Nguyễn</td>
+                    <td>Phương Ngân</td>
+                    <td>22421050084</td>
+                    <td>DCCTCT69_07</td>
+                    <td>69</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Đỗ</td>
+                    <td>Hương Ny</td>
+                    <td>22421050085</td>
+                    <td>DCCTCT69_07</td>
+                    <!-- Rowspan để gộp các hàng có thông tin giống nhau
+                        Ô có thông tin giống thì không cần nhập td -->
+                    <td rowspan="2">69</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Lee</td>
+                    <td>Min Hong</td>
+                    <td>22421050086</td>
+                    <td>DCCTCT69_07</td>            
+             </table>
+        </div>
+        
+
+    </body>
+</html>
