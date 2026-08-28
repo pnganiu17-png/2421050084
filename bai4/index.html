@@ -4,31 +4,40 @@
     </head>
     <body>
         <h1>Form tạo thông tin người dùng</h1>
+        <!-- Form để tạo 1 biểu mẫu(form đăng kí, đăng nhập) -->
         <form>
             <div>
                 <p><b>Họ và tên:</b></p>
-                <!-- Input nếu không truy truyền type thì type mặc định là text-->
+                <!-- Input nếu không yêu cầu truyền type thì type mặc định là text-->
                 <!-- Đặt tên thì tiếng việt không dấu, viết liền -->
+                <!-- Type là các kiểu trong Input -->
+                <!-- Text: nhập văn bản ngắn, 1 dòng duy nhất, thẻ đơn -->
                 <input type="text" name="txt">
             </div>
 
             <div> 
                 <p><b>Giới thiệu:</b></p>
+                <!-- Textarea: nhập văn bản dài, nhiều dòng, thẻ đôi -->
                 <textarea name="gioiThieu"></textarea>
             </div>
 
             <div>
                 <p><b>Email:</b></p>
+                <!-- Email: nhập địa chỉ email -->
                 <input type="email" name="email">
             </div>
             
             <div> 
                 <p><b>Mã giới thiệu:</b></p>
+                <!-- Tel: nhập dạng số -->
+                <!-- Placeholder: văn bản gợi ý, hiển thị mờ bên trong ô nhập dữ liệu -->
+                <!-- Required: bắt buộc phải điền thông tin -->
+                <!-- Pattern: để đặt ra 1 quy tắc -->
                 <input name="maGioiThieu" 
                        type="tel"
                        placeholder="Dạng số 123"
                        required
-                       patten="([0-9]{1}(-[0-9]{3})(-[0-9]{3})(-[0-9]{4}))">
+                       pattern="([0-9]{1}(-[0-9]{3})(-[0-9]{3})(-[0-9]{4}))">
                        <!-- Số đầu tiên từ 0-9, gạch ngang, 3 số tiếp từ 0-9,.. -->
                 <br>
                 <!-- Số đầu tiên: 0 -->
@@ -39,11 +48,13 @@
                        type="tel"
                        placeholder="Nhập số điện thoại"
                        required
-                       patten="([0]{1}[9,3,6,8]{1}[0-9]{8})">
+                       pattern="([0]{1}[9,3,6,8]{1}[0-9]{8})">
             </div>
 
             <div>
                 <p><b>Giới tính:</b></p>
+                <!-- Radio: nút tròn, chỉ chọn được 1(vd:nam/nữ, A/B/C/D) -->
+                <!-- Name: chứa dữ liệu(bắt buộc), Value là dữ liệu -->
                 <input type="radio" name="gioiTinh" value="male">Nam
                 <br>
                 <input type="radio" name="gioiTinh" value="female">Nữ
@@ -51,13 +62,15 @@
 
             <div>
                 <p><b>Sở thích:</b></p>
+                <!-- Checkbox: ô vuông, chọn được nhiều lựa chọn(vd:sở thích,bài hát) -->
                 Game:<input type="checkbox" name="soThich" value="game"><br>
                 Sport:<input type="checkbox" name="soThich" value="sport"><br>
                 Music:<input type="checkbox" name="soThich" value="music">
             </div>
 
             <div>
-                <p><b>Trình duyệt web hay sử dụng:</b></p>
+                <p><b>Trình duyệt web hay sử dụng</b></p>
+                <!-- Input + Datalist: cho phép gõ trực tiếp vào ô, được nhập tuỳ ý hoặc gợi ý chọn -->
                 <input list="browsers">
                 <datalist id="browsers">
                     <option value="Internet Explorer">
@@ -67,6 +80,7 @@
                     <option value="Cốc cốc">
                 </datalist>
 
+                <!-- Select: không gõ được, chỉ bấm chọn, giới hạn 100% trog danh sách -->
                 <select name="browsers">
                     <option value="Internet Explorer">Internet Explorer</option>
                     <option value="Firefox">Firefox</option>
@@ -77,50 +91,57 @@
             </div>
 
             <div>
-                <!-- Range là 1 thanh kéo giá trị -->
+                <!-- Range: 1 thanh kéo giá trị -->
+                <!--id=a, a: tên định danh duy nhất đặt cho thanh trượt(a là tên tự đặt) -->
+                <!-- value=50, 0:giá trị ban đầu(mặc định) khi vừa mở trang web -->
                 0 <input type="range" id="a" value="50"> 100
             </div>
 
             <div>
-                <!-- Button là tạo ra 1 click số -->
+                <!-- Submit: nộp -->
+                <!-- Button là tạo ra 1 click số, thay đổi trên thanh kéo -->
                 <input type="submit">
                 <button>click</button>
-                <!-- Reset trở về trạng thái mặc định -->
+                <!-- Reset: trở về trạng thái mặc định -->
                 <input type="reset">
             </div>
 
             <div>
-                <iframe width="560" 
-                        height="315" 
-                        src="https://www.youtube.com/embed/LOJ1vs2oy_o?si=iVmN_ga3v6IdOcWS" 
-                        title="YouTube 
-                        video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen>
+                <!-- Iframe: nhúng trang web khác trực tiếp vào trang web của bạn -->
+                <!-- Mở trang web bất kì, vd:Ytb->mở video bất kì-> ấn chia sẻ-> nhúng->sao chép->dán vào HTML của mình -->
+                <!-- Khi nhúng bắt buộc dùng Live Server: click chuột phải->Open with the Live Sever -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xBwUrQMrIP4?si=Gn3h0afaFGsD3UVa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
             </div>
 
+            <!-- MARQUEE: tạo hiệu ứng chữ chạy hoặc hình ảnh chạy ngang dọc trên mh -->
             <MARQUEE>
                 <img src="../anh/pn.jpg">
             </MARQUEE>
 
+            <!-- Audio + controls: chèn tệp âm thanh -->
+            <!-- Controls: hiển thị bảng điều khiển: play/pause, tăng chỉnh âm lượng, bật/tắt tiếng -->
             <audio controls>
-                <source src="/anh/" type="audio">
+                <source src="/anh/audio.mp3" type="audio/mp3">
             </audio>
 
+            <!-- Video + controls: chèn tệp video -->
+            <!-- Controls: bắt buộc có nếu không thì vd ở dạng tĩnh(ảnh), không phải video -->
             <video controls>
-                <source src="/anh/" type="video">
+                <source src="/anh/video.mp4" type="video/mp4">
             </video>
 
             <div>
                 <!-- Một số kí tự đặc biệt -->
                 <!-- Dấu cách: &nbsp
-                Dấu <: &lt
-                Dấu >: &gt
-                Dấu &: &amp
-                Dấu ": &qout -->
+                     Dấu <: &lt
+                     Dấu >: &gt
+                     Dấu &: &amp
+                     Dấu ": &qout -->
+                <p>Chào bạn&nbsp;&nbsp;&nbsp;nha</p>
+                <p>Thẻ ngắt dòng, xuống dòng là &lt;br&gt;</p>
+                <p>Tom &amp; Jerry</p>
+                <p>Cô ấy nói: &quot;ok&quot;</p>
             </div>
         </form> 
     </body>
