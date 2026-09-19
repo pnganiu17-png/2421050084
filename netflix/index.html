@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #2F2C38;
+            color: white;
+        }
+
+        .danh-sach-muc{
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            align-item: center;
+        }
+
+        .lien-ket{
+            text-decoration: none;
+            color: #DBDBDD;
+            font-weight: bold;
+        }
+
+        .lien-ket-danh-muc{
+            text-decoration: none;
+            color: #DBDBDD;
+            font-weight: bold;
+            background-color: gray;
+            border-radius: 15px;
+            padding: 7px;
+        }
+
+        header{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .muc{
+            padding: 15px;
+            border-radius: 25px;
+        }
+
+        .muc:hover{
+            background-color: gray;
+        }
+
+        .logo{
+            /* width: 20%; */
+            width: 5%;
+        }
+
+        .avata{
+            width: 30px;
+            height: 30px;
+            border-radius:15px;
+            object-fit: cover;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .dang-chon{
+            background-color: #4E4B52;
+            padding: 15px;
+            border-radius: 25px;
+        }
+        
+        .banner{
+            /* background-color: aliceblue; */
+            width: 95%;
+            /* height: 40vh; */
+            margin: 20px auto;
+            border-radius: 20px;
+        }
+
+        .banner-anh{
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .tieu-de-banner{
+            width: 100%;
+            display: flex;
+
+        }
+
+        .menu{
+            list-style:none;
+        }
+
+        .danh-sach-the-loai{
+            width: 95%;
+            /* background-color: red; */
+            height: 20vh;
+            margin: 20px auto;
+        }
+
+        .phim{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .phim-poster{
+            width: 24%;
+            height: 20vh;
+            border-radius: 15px;
+            background-color: #aliceblue;
+            /* hình căn đúng tỉ lệ đep */
+            object-fit: cover;
+        }
+
+        .danh-sach-nhan-vat{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nhan-vat{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="danh-muc">
+        <ul class="danh-sach-muc">
+            <img class="logo" src="../netflix/logo.svg">
+            <li class="muc"><a href="#" class="lien-ket-danh-muc">Trang chủ</a></li>
+            <li class="muc"><a href="#" class="lien-ket">Nhân vật</a></li>
+            <li class="muc"><a href="#" class="lien-ket">Series</a></li>
+            <li class="muc"><a href="#" class="lien-ket">Phim</a></li>
+            <li class="muc"><a href="#" class="lien-ket">Mới & phổ biến</a></li>
+            <li class="muc"><a href="#" class="lien-ket">Netflix của tôi</a></li>
+            <li class="muc"><a href="#" class="lien-ket">Duyệt tìm theo ngôn ngữ</a></li>
+        </ul>
+     </nav>
+
+    <div class="chuc-nang">
+        <div class="tim-kiem"></div>
+        <div class="thong-tin">
+            <img class="avata" src="../netflix/avata.jpg" alt="">
+        </div>
+    </div>
+    </header>
+
+    <main>
+        <div class="banner">
+            <img class="banner-anh" src="../netflix/banner.jpg" alt="">
+
+            <!-- Chưa làm được -->
+            <div class="tieu-de-banner">
+                <p class="series">Series . Trẻ em . 2026 . 2 mùa. k</p><br>
+                <p class="noi-dung-banner">Cảnh sát trường Labrado và trợ thủ đáng tin-sĩ quan Derboman-vào cuộc, đấu tranh với tội phạm và chia sẻ các mẹo an toàn hữu ích để giữ cho thị trấn Rừng luôn an toàn.</p><br>
+                <nav>
+                    <ul class="menu">
+                        <li class="thong-tin">Phát</li>
+                        <li class="thong-tin">Thông tin khác</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="danh-sach-the-loai">
+            <div class="the-loai">
+                <div class="ten-the-loai">
+                   <h2>Có thể bạn chưa xem</h2>
+                </div>
+                <div class="phim">
+                    <img src="../netflix/anh1.jpg" class=" phim-poster">
+                    <img src="../netflix/anh2.jpg" class=" phim-poster">
+                    <img src="../netflix/anh3.jpg" class=" phim-poster">
+                    <img src="../netflix/anh4.jpg" class=" phim-poster">
+                </div>
+            </div>
+
+            <div class="the-loai">
+                <div class="ten-the-loai">
+                   <h2>Phim hài hước </h2>
+                </div>
+                <div class="phim">
+                    <img src="../netflix/anh5.jpg" class=" phim-poster">
+                    <img src="../netflix/anh6.jpg" class=" phim-poster">
+                    <img src="../netflix/anh7.jpg" class=" phim-poster">
+                    <img src="../netflix/anh8.jpg" class=" phim-poster">
+                </div>
+            </div>
+
+            <div class="the-loai">
+                <div class="ten-the-loai">
+                   <h2>Hoạt hình</h2>
+                </div>
+                <div class="phim">
+                    <img src="../netflix/anh9.jpg" class=" phim-poster">
+                    <img src="../netflix/anh10.jpg" class=" phim-poster">
+                    <img src="../netflix/anh11.jpg" class=" phim-poster">
+                    <img src="../netflix/anh12.jpg" class=" phim-poster">
+                </div>
+            </div>
+
+            <div class="the-loai">
+                <div class="ten-the-loai">
+                   <h2>Mọi người đang xem</h2>
+                </div>
+                <div class="phim">
+                    <img src="../netflix/anh13.jpg" class=" phim-poster">
+                    <img src="../netflix/anh14.jpg" class=" phim-poster">
+                    <img src="../netflix/anh15.jpg" class=" phim-poster">
+                    <img src="../netflix/anh16.jpg" class=" phim-poster">
+                </div>
+            </div>
+
+            <div class="the-loai">
+                <div class="ten-the-loai">
+                   <h2>Top 10 phim Trẻ em tại Việt Nam hôm nay</h2>
+                </div>
+                <div class="phim">
+                    <img src="../netflix/anh17.jpg" class=" phim-poster">
+                    <img src="../netflix/anh18.jpg" class=" phim-poster">
+                    <img src="../netflix/anh19.jpg" class=" phim-poster">
+                    <img src="../netflix/anh20.jpg" class=" phim-poster">
+                </div>
+            </div>
+
+            <div class="the-loai">
+                <div class="ten-the-loai">
+                   <h2>Giáo dục và giải trí</h2>
+                </div>
+                <div class="phim">
+                    <img src="../netflix/anh21.jpg" class=" phim-poster">
+                    <img src="../netflix/anh22.jpg" class=" phim-poster">
+                    <img src="../netflix/anh23.jpg" class=" phim-poster">
+                    <img src="../netflix/anh24.jpg" class=" phim-poster">
+                </div>
+            </div>
+
+            <div class="the-loai">
+                <div class="ten-the-loai">
+                   <h2>Nhân vật</h2>
+                </div>
+                <div class="danh-sach-nhan-vat">
+                    <img src="../netflix/anhnv1.jpg" class=" nhan-vat">
+                    <img src="../netflix/nv2.jpg" class=" nhan-vat">
+                    <img src="../netflix/nv3.jpg" class=" nhan-vat">
+                    <img src="../netflix/nv4.jpg" class=" nhan-vat">
+                    <img src="../netflix/nv5.jpg" class=" nhan-vat">
+                    <img src="../netflix/nv6.jpg" class=" nhan-vat">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
