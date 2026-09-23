@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Internal JavaScript -->
+    <script>
+        // In ra màn hình: document.writeln
+        document.writeln("Hello World! <br>");
+
+        // Khai báo biến dùng: var
+        var name = "Phương Ngân <br>"
+        document.writeln(name);
+
+        ten = "Hương Ly <br>"
+        document.writeln(ten);
+
+        // Số thì không cần dấu nháy đôi
+        var namNay = 2026;
+        document.writeln(namNay);
+
+        // Phép toán: cộng, trừ, nhân, chia, chia lấy dư
+        var soThuNhat = 16;
+        var soThuHai = 10;
+        var ketQua = 0
+        //Cộng:
+        document.writeln("<br> Kết quả số thứ 1 + số thứ 2:");
+        ketQua = soThuNhat + soThuHai;
+        document.write(ketQua);
+
+         //Trừ:
+        document.writeln("<br> Kết quả số thứ 1 - số thứ 2:");
+        ketQua = soThuNhat - soThuHai;
+        document.write(ketQua);
+
+         //Nhân:
+        document.writeln("<br> Kết quả số thứ 1 * số thứ 2:");
+        ketQua = soThuNhat * soThuHai;
+        document.write(ketQua);
+
+         //Chia:
+        document.writeln("<br> Kết quả số thứ 1 / số thứ 2:");
+        ketQua = soThuNhat / soThuHai;
+        document.write(ketQua);
+
+        //Chia lấy dư: %
+        document.writeln("<br> Kết quả số thứ 1 % số thứ 2:");
+        ketQua = soThuNhat % soThuHai;
+        document.write(ketQua);
+
+        //++: thêm 1 đơn vị  phụ thuộc vào vị trí đặt dấu (abc++ giữ nguyên)
+        document.writeln("<br>");
+        document.write(soThuNhat++);
+
+        document.writeln("<br>");
+        document.write(++soThuNhat);
+
+        //--: giảm 1 đơn vị
+        document.writeln("<br>");
+        document.write(--soThuNhat);
+
+        //+=:
+        soThuNhat += soThuHai;
+        document.writeln("<br>");
+        document.writeln(soThuNhat);
+
+        //-=:
+        soThuNhat -= soThuHai;
+        document.writeln("<br>");
+        document.writeln(soThuNhat);
+
+        //Ghép chuỗi:+
+        var ho = "Nguyễn";
+        document.writeln("<br>");
+        document.writeln(ho + " " + name);
+
+        //Chiều dài chuỗi: length
+        document.writeln(ho.length);
+
+        //Kiểm tra kiểu của biến: typeof
+        document.writeln(typeof(ho));
+
+        //Tìm vị trí (kiểu số): indexOf
+        var hoVaTen = "Nguyễn Phương Ngân";
+        document.writeln("<br>");
+        document.writeln(hoVaTen.indexOf("P"));
+
+        //
+        document.writeln("<br>");
+        document.writeln(hoVaTen.includes("P"));
+
+        document.writeln("<br>");
+        document.writeln(hoVaTen.includes("E"));
+
+
+        //
+        document.writeln("<br>");
+        document.writeln(hoVaTen.startsWith("Nguyễn"));
+
+        document.writeln("<br>");
+        document.writeln(hoVaTen.startsWith("Phương"));
+
+        //
+        document.writeln("<br>");
+        document.writeln(hoVaTen.replace("Nguyễn","Trần"));
+
+        //In hoa: toUpperCase
+        document.writeln("<br>");
+        document.writeln(hoVaTen.toUpperCase());
+
+        //In thường: toLocaleLowerCase
+        document.writeln("<br>");
+        document.writeln(hoVaTen.toLocaleLowerCase());
+
+    </script>
+
+
+    <!-- External JavaScript -->
+    <!-- Thường link để ở cuối trang -->
+    <script src="script.js"></script>
+</body>
+</html>
