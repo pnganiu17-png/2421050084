@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tên hiển thị trên tab trình duyệt: title -->
+    <title>Document</title>
+    <style>
+        /* .class, #id */
+
+        /* 1. Màu chữ: color, màu nền: background-color */
+        .mausac{
+            color: red;
+            background-color: aqua;
+        }
+
+        /* 2. Ảnh nền: background-image */
+        .anh{
+            /* Không lặp ảnh */
+            background-repeat: no-repeat;
+            /* Ảnh phủ kín khu vực */
+            background-size: cover;
+            /* Đặt ảnh ở giữa */
+            background-position: center;
+        }
+
+        /* 3. Chữ */
+        .chu{
+            /* Kích thước chữ */
+            font-size: 12px;
+            /* Kiểu chữ: arial */
+            font-family: Arial;
+            /* Độ đậm */
+            font-weight: bold;
+            font-weight: 400;
+            /* Chữ nghiêng */
+            font-style: normal;
+            font-style: italic;
+            /* Căn chữ trong khối: trái, phải, giữa, căn đều */
+            /* Trái, phải, giữa */
+            text-align: left; 
+            text-align: right;
+            text-align: center;
+            /* Căn đều */
+            text-align: justify;
+            /* Trang trí chữ: gạch chân, bỏ gạch chân */
+            /* Gạch chân */
+            text-decoration: underline;
+            /* Bỏ gạch chân mặc định của link */
+            text-decoration: none;
+        }
+
+        /* 4. Khối */
+        .khoi{
+            /* Chiều rộng, chiều cao của khối */
+            width: 50px, 50%, 100%;
+            height: 300px;
+            /* Chiều cao, chiều rộng tối thiểu */
+            min-width: 120px;
+            max-width: 120px;
+
+
+            /* BORDER */
+            /* Đường viền, đường kẻ thẳng */
+            border: 1px solid blue; /* solid: liền, dashed: đứt, dotted: chấm */
+            /* Bo góc: 50% là thành hình tròn */
+            border-radius: 10px, 50%;
+
+
+            /*MARGIN, PADDING: Tạo khoảng cách bên ngoài khối */
+            margin: 20px;
+            margin-top: 10px;  /* phía trên */
+            margin-bottom: 10px; /* phía dưới */
+            margin-right: 10px;
+            margin-left: 10px;
+            /* Tạo khoảng cách bên trong khối, cho béo ra  */
+            padding: 20px;
+            /* padding=margin */
+            /* Viết tắt margin, padding: trên, phải, dưới, trái */
+            margin: 10px 20px 30px 40px;
+            /* trên+dưới, trái+phải */
+            margin: 10px 20px;
+
+
+            /* DISPLAY: Cách phần tử được hiển thị */
+            /* Chiếm 1 dòng, 1 khối */
+            display: block;
+            /* Có thể nằm trên cùng dòng  nếu đủ chỗ */
+            display: inline;
+            /* Nằm trên cùng 1 dòng mà vẫn đặt được width, height */
+            display: inline-block;
+            /* Ẩn phần tử và không chiếm chỗ */
+            display: none;
+            /* Để sắp xếp các phần tử, các ô nằm cạnh nhau */
+            display: flex;
+
+
+            /* JUSTIFY-CONTENT: Căn các phẩn tử theo trục chính */
+            justify-content: center;/* dồn về giữa  */
+            justify-content: flex-start;/* dồn về đầu */
+            justify-content: flex-end;/* dồn về cuối; */
+            justify-content: space-between;/* cách đều, không có khoảng ngoài  */
+            justify-content: space-around; /* có khoảng xung quanh */
+            justify-content: space-evenly; /* khoảng cách đều nhau */
+
+
+            /* ALIGN-ITEMS: Căn treo trục phụ(trục mà không có chữ, nd)
+            giống JUSTIFY-CONTENT */
+
+
+            /* CỰC KỲ HAY DÙNG */
+            /* Căn giữa theo cả chiều ngang và chiều dọc */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Muốn thấy rõ chiều dọc */
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            /* FLEX-DIRECTION: Hướng sắp xếp */
+            /* xếp theo hàng ngang, dọc */
+            flex-direction: row;
+            flex-direction: column;
+
+
+            /* GAP: khoảng cách, Các ô các nhau 20px */
+            gap: 20px;
+
+
+            /* FLEX-WRAP: không đủ chỗ thì ptu xuống dòng */
+            flex-wrap: wrap;
+
+
+            /* POSITION: Điều khiển vị trí phần tử */
+            /* Phần tử nằm theo vị trí bình thường */
+            position: static;
+            /* Phần tử vẫn giữ vị trí ban đầu, làm mốc  */
+            position: relative;
+            /* Phần tử ở vị trí cố định */
+            position: absolute;
+            /* Phần tử cố định trên mh khi cuộn */
+            position: fixed;
+            /* top, right, bottom, left */
+
+
+            /* HOVER: Con trỏ chuột, đưa chuột lên */
+
+
+            /* OBJECT-FIST: Ảnh không bị méo, phủ kín khung */
+            object-fit: cover;
+
+
+            /* LIST-STYLE: Kiểu danh sách */
+            /* bỏ dấu chấm đầu dòng khi dùng ul, li */
+            list-style:none;
+        }
+
+
+        .cssbang{
+            th, td {
+               border: 1px solid black;
+               padding: 10px;
+            }
+        }
+
+        .cssbutton{
+            /* Khối đăng nhập */
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+
+        /* TẠO BẢNG */
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }     
+    </style>
+</head>
+ <!-- Nội dụng trang web: body -->
+<body> 
+    <nav>Thanh điều hướng: Trang chủ, giới thiệu, liên hệ,...</nav>
+    <main>Nội dung chính</main>
+    <section>1 khu vực nội dung trong main</section>
+    <footer>Cuối trang: bản quyền, tt liên hệ</footer>
+
+    <!-- Chỉ số trên, dưới -->
+    <sup>Chỉ số trên</sup>
+    <sub>Chỉ số dưới</sub>
+
+    <!-- Gán ảnh -->
+    <img class="abc" src="../anh/pn.jpg">
+
+    <!-- Gán link -->
+    <link class="abc" href="">
+
+    <!-- Link đến file khác -->
+    <a class="abc" href="">Tiêu đề</a>
+
+    <!-- Danh sách không có thứ tự -->
+    <ul>
+        <li></li>
+    </ul>
+    <!-- Danh sách có thứ tự -->
+    <ol>
+        <li></li>
+    </ol>
+
+
+    <!-- Tạo bảng đặt trong thẻ table bài 3 -->
+    <table>
+    <tr>
+        <th>STT</th>
+        <th>Họ tên</th>
+        <th>Lớp</th>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>Nguyễn Văn A</td>
+        <td>CNTT1</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>Nguyễn Văn B</td>
+        <td>CNTT2</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>Nguyễn Văn C</td>
+        <td>CNTT3</td>
+    </tr>
+    </table>
+    <!-- colspan: gộp 2 cột, rowspan: gộp 2 cột -->
+
+
+</body>
+</html>

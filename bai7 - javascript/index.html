@@ -51,7 +51,7 @@
         ketQua = soThuNhat % soThuHai;
         document.write(ketQua);
 
-        //++: thêm 1 đơn vị  phụ thuộc vào vị trí đặt dấu (abc++ giữ nguyên)
+        //++: tăng thêm 1 đơn vị (phụ thuộc vào vị trí đặt dấu)
         document.writeln("<br>");
         document.write(soThuNhat++);
 
@@ -62,17 +62,17 @@
         document.writeln("<br>");
         document.write(--soThuNhat);
 
-        //+=:
+        //+=: sothunhat= sothunhat + sothuhai
         soThuNhat += soThuHai;
         document.writeln("<br>");
         document.writeln(soThuNhat);
 
-        //-=:
+        //-=: sothunhat= sothunhat - sothuhai
         soThuNhat -= soThuHai;
         document.writeln("<br>");
         document.writeln(soThuNhat);
 
-        //Ghép chuỗi:+
+        //Ghép chuỗi: + (nối các chuỗi lại với nhau)
         var ho = "Nguyễn";
         document.writeln("<br>");
         document.writeln(ho + " " + name);
@@ -83,12 +83,12 @@
         //Kiểm tra kiểu của biến: typeof
         document.writeln(typeof(ho));
 
-        //Tìm vị trí (kiểu số): indexOf
+        //Tìm vị trí (kết quả trả về kiểu số): indexOf
         var hoVaTen = "Nguyễn Phương Ngân";
         document.writeln("<br>");
         document.writeln(hoVaTen.indexOf("P"));
 
-        //
+        //Tìm xem trong mảng có kí tự đấy không (kết quả trả về dạng true/false): includes
         document.writeln("<br>");
         document.writeln(hoVaTen.includes("P"));
 
@@ -96,14 +96,14 @@
         document.writeln(hoVaTen.includes("E"));
 
 
-        //
+        //Kiểm tra chuỗi có bắt đầu như nào (kết quả trả về dạng true/false): startsWith
         document.writeln("<br>");
         document.writeln(hoVaTen.startsWith("Nguyễn"));
 
         document.writeln("<br>");
         document.writeln(hoVaTen.startsWith("Phương"));
 
-        //
+        //Tìm kiếm và thay thế 1 chuỗi mới: replace
         document.writeln("<br>");
         document.writeln(hoVaTen.replace("Nguyễn","Trần"));
 
@@ -115,8 +115,154 @@
         document.writeln("<br>");
         document.writeln(hoVaTen.toLocaleLowerCase());
 
-    </script>
 
+        //BUỔI 2:
+        //DATE
+        var homNay = new Date();
+        document.writeln("<br>");
+        document.write(homNay);
+
+        var ngay = new Date("9/30/2026");
+        document.writeln("<br>");
+        document.write(ngay);
+
+        var namNay = homNay.getFullYear();
+        document.writeln("<br>");
+        document.write(namNay);
+
+        //Tháng luôn chậm đi 1 đơn vị: 0 là tháng 1,...
+        var thangNay = homNay.getMonth();
+        document.writeln("<br>");
+        document.write(thangNay);
+
+        var ngayNay = homNay.getDate();
+        document.writeln("<br>");
+        document.write(ngayNay);
+
+        //Thứ chậm hơn 1 đơn vị: 1 là thứ 2,...
+        var thuNay = homNay.getDay();
+        document.writeln("<br>");
+        document.write(thuNay);
+
+        var ngayHomNay = homNay.getDate();
+        var thu = homNay.getDay()+1;
+        document.writeln("<br>");
+        document.write("Hôm nay là thứ " + thu + " ngày " + ngayHomNay + " tháng " + thangNay + " năm " + namNay);
+
+
+        //MẢNG
+        var mangSo = [1,2,3,4,5];
+        document.writeln("<br>");
+        //Thứ tự của phần tử
+        document.writeln(mangSo[2]);
+        document.writeln("<br>");
+        //Độ dài của mảng: length
+        document.writeln(mangSo.length);
+
+        document.writeln("<br>");
+        var mangTen = ["Ngan", "Ly", "Hong"];
+        document.write(mangTen[2]);
+
+        document.writeln("<br>");
+        var mang = [1,2,3,4,5, "Ngan", "Ly", "Hong"];
+        document.write(mang[5]);
+
+        var d = mang.concat(mangSo, mangTen);
+        document.writeln("<br>");
+        //Join: thêm dấu gạch giữa vào các phần tử trong mảng
+        document.write(d.join("-"));
+
+        document.writeln("<br>");
+        //Pop: lấy phần tử cuối cùng ở trong mảng
+        document.write(d.pop());
+
+        document.writeln("<br>");
+        //Push: Thêm phần tử vào mảng
+        d.push("qanh");
+        document.write(d);
+
+        document.writeln("<br>");
+        //Reverse: Đảo ngược phần tử trong mảng lại
+        document.write(mangSo.reverse());
+
+        
+        //OBJECT
+        var thongTinSinhVien = {
+            ten: "Nguyen Phuong Ngan",
+            namSinh: 2006,
+            queQuan: {
+                tinh: "Thai Binh",
+                xa: "Hung Phu"
+            }
+        };
+        document.writeln("<br>");
+        //Khai báo phần tử nào thì lấy ptu đó
+        document.write(thongTinSinhVien.queQuan.tinh);
+
+        document.writeln("<br>");
+        //Tính tuổi sinh viên:
+        tuoi = namNay - thongTinSinhVien.namSinh;
+        thongTinSinhVien.tuoi = tuoi;
+         document.write(tuoi);
+        //console.log(thongTinSinhVien);
+
+        //boolean: true nam / false nữ
+        var thongTinSinhVien = {
+            gioiTinh: false
+        }
+        thongTinSinhVien.gioiTinh = true;
+        var danhSach = [
+          {
+            ten: "Nguyen Phuong Ngan",
+            namSinh: 2006,
+            queQuan: {
+                thanhPho: "Thai Binh",
+                xa: "Hung Phu"
+            }
+          },
+          {
+            ten: "Do Huong Ly",
+            namSinh: 2006,
+            queQuan: {
+                thanhPho: "Ha Noi",
+                xa: "Hung Phu"
+            }
+          }
+        ];
+        console.log(danhSach);
+
+        //== != ><
+        var so1 = 10; //số 10
+        var so2 = "10"; //chuỗi 10
+        document.writeln("<br>");
+        document.writeln(so1 == so2);
+
+
+        document.writeln("<br>");
+        if(thu>6){
+            document.writeln("Cuối tuần");
+        }else if(thu == 6){
+            document.writeln("Sắp được nghỉ học")
+        }else{
+            document.writeln("Đi học");
+        }
+
+        document.writeln("<br>");
+        var so = 5;
+        //Kiểm tra số chẵn lẻ
+        if(so %2 == 0){
+            document.writeln(so+ " là số chẵn");
+        }
+        else{
+            document.writeln(so+ " là số lẻ");
+        }
+
+        //btvn: var so = 200000001, 1 số quá lớn thì in ra thế nào
+
+
+
+
+    </script>
 
     <!-- External JavaScript -->
     <!-- Thường link để ở cuối trang -->
