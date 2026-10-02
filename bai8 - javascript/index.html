@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ////POPUP BOXES: 
+        //function
+        function sayHello(){
+            document.write("Hello");
+        }
+
+        sayHello();
+
+        //có tham số:
+        document.writeln("<br>");
+        function sayHello2(ten){
+            document.write("Xin chào bạn "+ ten);
+        }
+
+        sayHello2("Phương Ngân");
+        document.writeln("<br>");
+        sayHello2("Khánh Ngân");
+
+        //Ví dụ 2: Nhập vào 2 số bất kì, kết hợp với hàm tính tổng 2 số
+        document.writeln("<br>");
+        function tinhTong(a,b){
+            //! đằng trước là phủ định = false
+            if (isNaN(a) == flase && isNaN(b) == false){
+                 document.write("Tổng 2 số là: ", (so1+so2));
+            }
+        }
+        var so1 = Number(prompt("Nhập số thứ 1: ", "Nhập ở đây"))
+        var so2 = Number(prompt("Nhập số thứ 2: ", "Nhập ở đây"))
+        tinhTong(so1, so2);
+
+        //BTVN: Viết hàm tính điểm dựa trên 3 đầu điểm (A, B, C)
+        //tong = A*0,6 + B*O,3+ C*0,1 => điểm chữ tương ứng
+    </script>
+</body>
+</html>

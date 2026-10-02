@@ -116,6 +116,7 @@
         document.writeln(hoVaTen.toLocaleLowerCase());
 
 
+
         //BUỔI 2:
         //DATE
         var homNay = new Date();
@@ -231,7 +232,7 @@
         ];
         console.log(danhSach);
 
-        //== != ><
+        //==, !=, ><
         var so1 = 10; //số 10
         var so2 = "10"; //chuỗi 10
         document.writeln("<br>");
@@ -257,13 +258,110 @@
             document.writeln(so+ " là số lẻ");
         }
 
-        //btvn: var so = 200000001, 1 số quá lớn thì in ra thế nào
+        //Btvn: var so = 200000001, 1 số quá lớn thì in ra thế nào
+        //Có in ra được như bình thường, số lớn hơn 9ty có thể in, nhưng có thể sai hoặc bị làm tròn
+        document.writeln("<br>");
+        var so = 20000000001;
+        if(so %2 == 0){
+            document.writeln(so+ " là số chẵn");
+        }
+        else{
+            document.writeln(so+ " là số lẻ");
+        }
+        //Giải pháp nếu số quá lớn:
+        var so = "20000000000000000000009";
+        var doDai = so.length;
+        var soCuoiCung = so[doDai-1];
+        document.writeln("<br>");
+        document.writeln(soCuoiCung);
+        document.writeln("<br>");
+        if(soCuoiCung %2 == 0){
+            document.writeln(so+ " là số chẵn");
+        }
+        else{
+            document.writeln(so+ " là số lẻ");
+        }
 
+
+
+        //BUỔI 3:
+        //SWITCH CASE:
+        document.writeln("<br>");
+        var d = new Date();
+        var theDay = d.getDay();
+        switch (theDay){
+            case 5:
+                document.write("Finally Friday");
+                break;
+            case 6:
+                 document.write("Super Saturday");
+                 break;
+            case 0:
+                 document.write("Sleepy Sunday");
+                 break;
+            default:
+                 document.write("I'm looking forward to this weekend!");
+        }
+
+    
+        //Vòng lặp FOR:
+        for (var index = 1; index <= 10; index++){
+            document.writeln("<br>");
+            document.writeln("thèm gà rán " + index);
+        }
+        //Mảng:
+        //var mang = [1,2,3,4,5, "Ngan", "Ly", "Hong"];
+        for (var i = 0; i< mang.length; i++){
+            document.writeln("<br>");
+            document.writeln(mang[i]);
+        }
+        //Ví dụ 1:
+        for (var i = 0; i< mang.length; i++){
+            if(isNaN(mang[i])){
+                document.writeln("<br>");
+                document.writeln("xin chào  " + mang[i]);
+            }
+        }
+
+        
+        //WHITE: kiểm tra đầu(đếm tiền trước khi mua)
+        var i = 0;
+        while (i<=10){
+            document.writeln("<br>");
+            document.writeln("The number is  " + i);
+            i = i+1;
+        }
+        //DO WHILE: kiểm tra sau(ăn rồi mới hỏi=)))))))
+        var j = 0;
+        do{
+            document.writeln("<br>");
+            document.writeln("The number is  " + j);
+            j = j+1;
+        }
+        while (j <= 10)
+
+
+        //POPUP BOXES: 
+        //alert: hiển thị nội dung thông báo lên
+        alert("hello");
+
+        //cofirm: hiện thị ra 2 trường hợp 
+        document.writeln("<br>");
+        var r = confirm("Press a button")
+        if (r==true){
+            document.write("You pressed OK!");
+        }
+        else{
+            document.write("You pressed Cancel!");
+        }
+
+        //prompt: nhập thông tin
+        var r =  prompt("Nhập vào họ tên", "Nhập tên ở đây");
+        document.write(r);
 
 
 
     </script>
-
     <!-- External JavaScript -->
     <!-- Thường link để ở cuối trang -->
     <script src="script.js"></script>
