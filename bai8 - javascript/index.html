@@ -97,14 +97,13 @@
         }
 
 
-        //bài tập: nhập năm sinh, in ra tuổi
-
+        //Bài tập: in năm sinh, tính tuổi
         function tinhTuoi(){
             var namSinh = parseInt(document.getElementById("namSinh").value);
             var namHienTai = new Date().getFullYear();
             var tuoi = namHienTai - namSinh;
 
-            document.getElementById("ketQuaTuoi").value = tinhTuoi();
+            document.getElementById("ketQuaTuoi").value = tuoi;
         }
 
 
