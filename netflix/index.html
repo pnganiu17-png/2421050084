@@ -75,11 +75,6 @@
             border-radius: 20px;
         }
 
-        .banner-anh{
-            width: 100%;
-            border-radius: 20px;
-        }
-
         .tieu-de-banner{
             width: 100%;
             display: flex;
@@ -122,6 +117,12 @@
             border-radius: 50%;
             object-fit: cover;
         }
+
+        .banner-anh{
+            width: 100%;
+            height: 500px;
+            border-radius: 20px;
+        }
     </style>
 </head>
 <body>
@@ -148,20 +149,14 @@
     </header>
 
     <main>
-        <div class="banner">
+         <!-- Banner -->
+        <div onclick="xemTrailer()" class="banner">
             <img class="banner-anh" src="../netflix/banner.jpg" alt="">
+        </div> 
 
-            <!-- Chưa làm được -->
-            <div class="tieu-de-banner">
-                <p class="series">Series . Trẻ em . 2026 . 2 mùa. k</p><br>
-                <p class="noi-dung-banner">Cảnh sát trường Labrado và trợ thủ đáng tin-sĩ quan Derboman-vào cuộc, đấu tranh với tội phạm và chia sẻ các mẹo an toàn hữu ích để giữ cho thị trấn Rừng luôn an toàn.</p><br>
-                <nav>
-                    <ul class="menu">
-                        <li class="thong-tin">Phát</li>
-                        <li class="thong-tin">Thông tin khác</li>
-                    </ul>
-                </nav>
-            </div>
+        <!-- Trailer -->
+        <div style="display: none;" class="banner">
+            <iframe class="banner-anh" src="https://www.youtube.com/embed/bssQnmgQQxE?si=0xtYKErgaFveIisY&amp;start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <div class="danh-sach-the-loai">
@@ -252,5 +247,20 @@
             </div>
         </div>
     </main>
+    <!-- Chân trang -->
+    <footer>
+
+    </footer>
+    <script>
+        function xemTrailer(){
+            //Ẩn banner đi
+            document.getElementsByClassName("banner")[0].style="display:none";
+            //Hiển thị trailer lên
+            document.getElementsByClassName("banner")[1].style="display:block";
+        }
+
+
+    </script>
+
 </body>
 </html>
