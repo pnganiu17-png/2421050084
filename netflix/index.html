@@ -101,7 +101,7 @@
             width: 24%;
             height: 20vh;
             border-radius: 15px;
-            background-color: #aliceblue;
+            background-color: white;
             /* hình căn đúng tỉ lệ đep */
             object-fit: cover;
         }
@@ -112,8 +112,8 @@
         }
 
         .nhan-vat{
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
         }
@@ -156,7 +156,7 @@
 
         <!-- Trailer -->
         <div style="display: none;" class="banner">
-            <iframe class="banner-anh" src="https://www.youtube.com/embed/bssQnmgQQxE?si=0xtYKErgaFveIisY&amp;start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe class="banner-anh" src="https://www.youtube.com/embed/lyAv38kLJdo?si=goeNNbQTw8SpaH8O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <div class="danh-sach-the-loai">
@@ -165,9 +165,9 @@
                    <h2>Có thể bạn chưa xem</h2>
                 </div>
                 <div class="phim">
-                    <img src="../netflix/i1.jpg" class=" phim-poster">
-                    <img src="../netflix/i2.jpg" class=" phim-poster">
-                    <img src="../netflix/i3.jpg" class=" phim-poster">
+                    <img onclick="chonPhim(1)" src="../netflix/i1.jpg" class=" phim-poster">
+                    <img onclick="chonPhim(2)" src="../netflix/i2.jpg" class=" phim-poster">
+                    <img onclick="chonPhim(3)" src="../netflix/i3.jpg" class=" phim-poster">
                     <img src="../netflix/i4.jpg" class=" phim-poster">
                 </div>
             </div>
@@ -249,9 +249,37 @@
     </main>
     <!-- Chân trang -->
     <footer>
-
     </footer>
     <script>
+        var phim=[
+            {
+                id: 1,
+                ten: "Zootopia",
+                thoiLuong: 10,
+                banner: "../netflix/i1.jpg",
+                trailer: "https://www.youtube.com/embed/2WkyaCFIG3Y?si=XZg6rwHZy0B4zYXv"
+            },
+            {
+                id: 2,
+                ten: "Ponyo",
+                thoiLuong: 10,
+                banner: "../netflix/i2.jpg",
+                trailer: "https://www.youtube.com/embed/X-HOMBJcTaw?si=b2BfHCzsZKEeZ1D_" 
+            },
+            {
+             id: 3,
+                ten: "Những chú cừu thông minh",
+                thoiLuong: 10,
+                banner: "../netflix/i3.jpg",
+                trailer: "https://www.youtube.com/embed/RE_AhUD2Bsw?si=bFt_KgpiqRfu7B9n" 
+            }
+
+        ];
+
+        var phimDangChon = phim[0];
+        var banner = document.getElementsByClassName("banner-anh")[0];
+        var trailer = document.getElementsByClassName("banner-anh")[1];
+
         function xemTrailer(){
             //Ẩn banner đi
             document.getElementsByClassName("banner")[0].style="display:none";
@@ -259,7 +287,16 @@
             document.getElementsByClassName("banner")[1].style="display:block";
         }
 
-
+        function chonPhim(id){
+            for (var i=0; i<phim.length; i++){
+                if(phim[i].id==id){
+                    banner.src=phim[i].banner;
+                    trailer.src=phim[i].trailer;
+                    banner.style="display: none";
+                    trailer.style="display: block";
+                }
+            }
+        }
     </script>
 
 </body>
