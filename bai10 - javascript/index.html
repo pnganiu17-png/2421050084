@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .video{
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+        .ten{
+            text-align: center;
+        }
+        .danh-sach{
+            width: 80%;
+            display: flex;
+            margin: 50px auto;
+            justify-content: space-between;
+        }
+        .anh{
+            width: 24%;
+            height: 100px;
+            img{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- màn xem -->
+    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/fLPS4sIpYh0?si=cWyt_YtKGKOGJkCy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h3 class="ten">1-20 Mùa 2 | Biên Tập | Những Chú Cừu Thông Minh</h3>
+    
+     <div class="danh-sach" onclick="chonVideo(1)">
+        <div class="anh">
+            <img src="../bai10 - javascript/chú báo hồng.jpg" alt="">
+            <p>Chú Báo Hồng tinh nghịch | tập 13 - Sinh tố màu hồng, Báo Hồng và Pals</p>
+        </div>
+        <div class="anh" onclick="chonVideo(2)">
+            <img src="../bai10 - javascript/cô bé masha.jpg" alt="">
+            <p>Cô Bé Masha và Chú Gấu Xiếc 🍉 Những ngày hè nóng nực 🏖️😎 Tuyển tập các tập phim</p>
+        </div>
+        <div class="anh" onclick="chonVideo(3)">
+            <img src="../bai10 - javascript/oggy.jpg" alt="">
+            <p>Oggy và những chú gián tinh nghịch | Hãy tìm sự bình an trong tâm hồn! | phim hoạt hình</p>
+        </div>
+        <div class="anh" onclick="chonVideo(4)">
+            <img src="../bai10 - javascript/ấu trùng tinh nghịch.jpg" alt="">
+            <p>Larva Tuba | BÉO PHÌ 2🍟 ẤU TRÙNG TINH NGHỊCH 🥗 NHỮNG CHÚ SÂU VUI NHỘN 🍿 PHIM HOẠT HÌNH HAY NHẤT 2025</p>
+        </div>
+     </div>
+     
+     <script>
+        var danhSachVideo = [
+            {
+                id: 1,
+                ten: "Chú Báo Hồng tinh nghịch | tập 13 - Sinh tố màu hồng, Báo Hồng và Pals",
+                duongDanAnh: "chú báo hồng.jpg",
+                duongDanYtb: "https://www.youtube.com/embed/vJTpVvV1jgo?si=1Tg-sQB04mjeO2Sw"
+            },
+            {
+                id: 2,
+                ten: "Cô Bé Masha và Chú Gấu Xiếc 🍉 Những ngày hè nóng nực 🏖️😎 Tuyển tập các tập phim",
+                duongDanAnh: "cô bé masha.jpg",
+                duongDanYtb: "https://www.youtube.com/embed/e6OIbqJY_o8?si=_-tY5clQ4AirbIlu"
+            },
+            {
+                id: 3,
+                ten: "Oggy và những chú gián tinh nghịch | Hãy tìm sự bình an trong tâm hồn! | phim hoạt hình",
+                duongDanAnh: "oggy.jpg",
+                duongDanYtb:"https://www.youtube.com/embed/-32B-u_YwRM?si=ZN5K7NKUu8xcr_if" 
+            },
+            {
+                id: 4,
+                ten: "Larva Tuba | BÉO PHÌ 2🍟 ẤU TRÙNG TINH NGHỊCH 🥗 NHỮNG CHÚ SÂU VUI NHỘN 🍿 PHIM HOẠT HÌNH HAY NHẤT 2025",
+                duongDanAnh: "ấu trùng tinh nghịch.jpg",
+                duongDanYtb: "https://www.youtube.com/embed/cqM_HFH3ueg?si=f7FCBcwTM9hB_yAX" 
+            },
+        ];
+
+        function chonVideo(id){
+            //Dùng vòng lặp for để tìm id tương ứng:
+            for (let i=0; i<danhSachVideo.length; i++){
+                if(danhSachVideo[i].id == id){
+                    document.getElementsByClassName("ten")[0].innerHTML = danhSachVideo[i].ten;
+                    document.getElementsByTagName("iframe")[0].src = danhSachVideo[i].duongDanYtb;
+                }
+            }
+        }
+        //Muốn truyền video thứ 3 lên thì chọn id=3
+        // chonVideo(3);
+     </script>
+</body>
+</html>
