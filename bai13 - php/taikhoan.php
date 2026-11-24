@@ -15,13 +15,21 @@
         }
         .btn-add{
             display: block;
-            width: 150px;
+            width: 120px;
             background-color: pink;
             color: white;
             padding: 10px 15px;;
             margin-bottom: 20px;
             border-radius: 5px;
             text-decoration: none;
+        }
+        .capnhat{
+            border-radius: 5px;
+            background-color: green;
+        }
+        .xoa{
+            border-radius: 5px;
+            background-color: red;
         }
     </style>
 </head>
@@ -45,6 +53,7 @@
                 <th>Ngày sinh</th>
                 <th>Số điện thoại</th>
                 <th>Giới tính</th>
+                <th>Chức năng</th>
             </tr>
 
             <?php
@@ -59,7 +68,11 @@
                 <td><?php echo $row['ho_ten']?></td>
                 <td><?php echo $row['ngay_sinh']?></td>
                 <td><?php echo $row['so_dien_thoai']?></td>
-                <td><?php echo $row['gioi_tinh']?></td>
+                <td><?php echo $row['gioi_tinh']==true?"Nam":"Nữ"?></td>
+                <td>
+                    <a class="capnhat" href="index.php?page_layout=capnhattaikhoan&id=<?php echo $row['id']?>">Cập nhật</a>
+                    <a class="xoa" href="xoataikhoan.php&id=<?php echo $row['id']?>">Xóa</a>
+                </td>
             </tr>
             
             <?php
