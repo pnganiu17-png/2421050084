@@ -27,6 +27,13 @@
         h1{
             margin: 5px 0;
         }
+        .i-text select{
+            dispay: block;
+            width: 100%;;
+            padding: 6px;
+            margin: 5px;
+            
+        }
     </style>
 </head>
 <body>
@@ -38,17 +45,55 @@
         <div class="i-text">
             <input type="text" name="quocGia" id="" placeholder="Quốc gia">
         </div>
+
+        <?php
+            $sqlTheLoai= "select * from the_loai";
+            $resultTheLoai = mysqli_query($conn, $sqlTheLoai);
+        ?>
+
         <div class="i-text">
-            <input type="text" name="idDaoDien" id="" placeholder="ID đạo diễn">
+            <select name="theLoai" id="">
+                <?php
+                    while($row= mysqli_fetch_assoc($resultTheLoai))
+                    {
+                ?>
+                    <option value="<?php echo $row['id'];?>"> <?php echo $row['ten_the_loai'];?>
+                <?php
+                
+                    }
+                ?>
+            </select>
+        </div>
+
+        <?php
+            $sqlDaoDien= "select * from dao_dien";
+            $resultidDaoDien = mysqli_query($conn, $sqlDaoDien);
+        ?>
+
+        <div class="i-text">
+            <select name="idDaoDien" id="" >
+                <?php
+                    while($row= mysqli_fetch_assoc($resultidDaoDien))
+                    {
+                ?>
+                    <option value="<?php echo $row['id'];?>"> 
+                        <?php echo $row['ho_ten'];?>
+                    </option>
+                <?php
+                
+                    }
+                ?>
+            </select>
+        </div>
+
+        <div class="i-text">
+            <input type="number" name="nam" id="" placeholder="Năm">
         </div>
         <div class="i-text">
-            <input type="date" name="nam" id="" placeholder="Năm">
+            <input type="number" name="doTuoi" id="" placeholder="Độ tuổi">
         </div>
         <div class="i-text">
-            <input type="text" name="doTuoi" id="" placeholder="Độ tuổi">
-        </div>
-        <div class="i-text">
-            <input type="text" name="moTa" id="" placeholder="Mô tả">
+            <input type="text" name="moTa" id="" placeholder="Trailer">
         </div>
         <button>Thêm</button>
     </form>

@@ -39,7 +39,14 @@
         <a class="btn-add" href="index.php?page_layout=themphim">Thêm phim</a>
     </div>
     <?php
-        $sql = "select * from phim";
+        $sql = "select * from phim p 
+        join dao_dien dd
+        on p.dao_dien_id = dd.id 
+        join phim_the_loai ptl
+        on p.id = ptl.phim_id 
+        join the_loai tl
+        on tl.id = ptl.the_loai_id
+        ";
         $result = mysqli_query($conn, $sql);
     ?>
 
@@ -49,10 +56,11 @@
                 <th>ID</th>
                 <th>Tên phim</th>
                 <th>Quốc gia</th>
-                <th>ID đạo diễn</th>
+                <th>Đạo diễn</th>
                 <th>Năm</th>
                 <th>Độ tuổi</th>
                 <th>Mô tả</th>
+                <th>Thể loại</th>
                 <th>Chức năng</th>
             </tr>
 
@@ -65,13 +73,14 @@
                 <td><?php echo $row['id']?></td>
                 <td><?php echo $row['ten_phim']?></td>
                 <td><?php echo $row['quoc_gia']?></td>
-                <td><?php echo $row['dao_dien_id']?></td>
+                <td><?php echo $row['ho_ten']?></td>
                 <td><?php echo $row['nam']?></td>
                 <td><?php echo $row['do_tuoi']?></td>
                 <td><?php echo $row['mo_ta']?></td>
+                <td><?php echo $row['ten_the_loai']?></td>
                 <td>
                     <a class="capnhat" href="index.php?page_layout=capnhatphim&id=<?php echo $row['id']?>">Cập nhật</a>
-                    <a class="xoa" href="xoaphim.php&id=<?php echo $row['id']?>">Xóa</a>
+                    <a class="xoa" href="index.php?page_layout=xoaphim&id=<?php echo $row['id']?>">Xóa</a>
                 </td>
             </tr>
             

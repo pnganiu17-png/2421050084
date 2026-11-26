@@ -1,0 +1,59 @@
+body{
+    /* background-color: skyblue; */
+}
+p{
+   
+}
+.chan{
+    background-color: aqua;
+}
+.le{
+    background-color: orange;
+}
+#dong3{
+    color: red;
+}
+
+/* Phông chữ */
+.a{
+    font-family: arial;
+    /* cỡ chữ */
+    font-size: 20px;
+    /* in nghiêng */
+    font-style: italic;
+    /* độ đậm */
+    font-weight: 600;
+    /* gạch chân */
+    text-decoration: underline;
+}
+
+.b{
+    /* Lề */
+    border-style: none;
+    /* lề, khung viền */
+    border-style: solid;
+    /* điều chỉnh độ rộng của viền lề */
+    border-style: 1px;
+    border-color: red;
+    /* bo tròn viền: hình tròn là 50px */
+    border-radius: 10px;
+    /* trên, dưới, trái, phải  */
+    border-top-color: blue;
+    border-right-width: 15px;
+}
+
+.c{
+    background-color: yellow;
+    border-style: solid;
+    /* trong béo */
+    padding: 10px;
+}
+
+.d{
+    background-color: orange;
+    border-style: solid;
+    /* ngoài béo */
+    width: 200px;
+    height: 200px;
+    
+}

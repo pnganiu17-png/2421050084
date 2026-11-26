@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chào mừng</h1>
+
+    <p>Đoạn văn, tự động thêm 1 khoảng trắng bên trên</p>
+
+    <!-- ĐỊNH DẠNG VĂN BẢN -->
+     <h1>Định dạng</h1>
+    <p>
+    <b>In đậm</b>
+    <i>In nghiêng</i>
+    <big>Lớn</big>
+    <small>Nhỏ</small>
+    <sub>Sub</sub>
+    <ins>Inserted</ins>
+    <del>Deleted</del>
+    <mark>Marked</mark>
+    </p>
+    
+    <!--SIÊU LIÊN KẾT -->
+    <h1>Liên kết, gắn link</h1>
+    <!-- Link -->
+    <p><a href="https://www.facebook.com/">Facebook</a></p>
+    <p></p><a href="../anh/pn.jpg">Ảnh lấy từ folder</a></p>
+    <!-- Ảnh -->
+    <p><img src="../anh/pn.jpg" width="300px" alt="" title=""></p> <!-- Img có thể để trong thẻ a, Alt là tiêu đề của ảnh, Title là tiêu đề khi di trỏ qua ảnh -->
+    <!-- Âm thanh -->
+    <p> <audio controls src="audio.mp3"></audio></p>
+    <!-- Video -->
+    <p> <video controls src="video.mp4" width="300px"></video></p>
+
+    <!-- CÁC LOẠI DANH SÁCH -->
+     <h1>Danh sách</h1>
+     <p>Danh sách không đánh số</p>
+     <ul>
+        <li>Hoa quả
+            <ul>
+                <li>Cam</li>
+                <li>Táo</li>
+            </ul>
+        </li>
+        <li>Gà rán</li>
+     </ul>
+     <p>Danh sách đánh số, type= thay đổi kí tự đánh số đầu tiên</p>
+     <ol type="a">
+        <li>Rau</li>
+        <li>Salad</li>
+     </ol>
+
+     <!-- BẢNG TABLE -->
+      <h1>Tạo bảng</h1>
+      <table bgcolor="black" >
+        <tr bgcolor="grey">
+            <th>STT</th>
+            <th>Họ tên</th>
+            <th>Khóa</th>
+        </tr>
+        <tr bgcolor="lightgrey">
+            <td>01</td>
+            <td>Phương Ngân</td>
+            <td>K69</td>
+        </tr>
+        <tr bgcolor="lightgrey">
+            <td>02</td>
+            <td>Khánh Ngân</td>
+            <td>K69</td>
+        </tr>
+      </table>
+
+      <!-- MÀU SẮC -->
+       <h1>Màu sắc</h1>
+       <div style="background-color: aqua;" >
+            <h2 style="color: pink;">Xin chào</h2>
+            <h2 style="color: white;">Tui là Phương Ngân</h2>
+       </div>
+       <span style="color:green;">Dòng</span>
+
+       <!-- NHÚNG :để nhúng nội dung nào đó vào trang web hiện tại-->
+        <h1>Thẻ iframe </h1>
+        <ifrane width="100%" src="https://www.google.com/search?gs_ssp=eJzj4tVP1zc0zCnJzrBIKS83YPTiTckvSkzNzc9TMDIwMgUAk2QJQg&q=doraemon+2025&rlz=1C1GCEB_enVN1146VN1146&oq=d%E1%BB%8Fae&gs_lcrp=EgZjaHJvbWUqCwgDEC4YChgLGIAEMgYIABBFGDkyDggBEAAYChgLGLEDGIAEMgsIAhAAGAoYCxiABDILCAMQLhgKGAsYgAQyDggEEAAYChgLGLEDGIAEMgsIBRAAGAoYCxiABDILCAYQABgKGAsYgAQyCwgHEAAYChgLGIAEMgsICBAAGAoYCxiABDILCAkQABgKGAsYgATSAQkxMTEyM2owajeoAgCwAgA&sourceid=chrome&source=chrome.ob&ie=UTF-8">Dỏeamon</ifrane>
+
+        <!-- NÚT NHẤN -->
+         <h1>Nút ấn: Button</h1>
+         <button onclick="" style="background-color:pink;">Click</button>
+
+         <!-- FORM -->
+          <h1>Form</h1>
+          <form>
+            <h2>Đăng nhập</h2>
+            <div>
+                <label for="hoten">Họ và tên:</label>
+                <!-- input ô để nhập thông tin -->
+                <input type="text" id="hoten" name="hoten"><br>
+            </div>
+            <div>
+                <label for="matkhau">Mật khẩu:</label>
+                <!-- password: ẩn mật khẩu -->
+                <input type="password" id="matkhau" name="matkhau"><br>
+            </div>
+            <div>
+                <label for="ngay">Ngày:</label>
+                <input type="date" id="" name=""><br>
+            </div>
+            <div>
+                <label for="sdt">Ngày:</label>
+                <!-- number chỉ có thể điền số -->
+                <input type="number" id="" name=""><br>
+            </div>
+            <!-- Gợi ý chọn -->
+             <div>
+                <select name="nganh">
+                    <option value="KHMT">KHMT</option>
+                    <option value="HTTT">HTTT</option>
+                    <option value="CNPM">CNPM</option>
+                </select>
+             </div>
+             <!-- Nút bấm chọn: radio -->
+              <!-- chỉ chọn dc 1 giá trị thì thêm gt name giống nhau -->
+               <div>
+                    <input type="radio" name="ok" value="hocsinh">Học sinh
+                    <input type="radio" name="ok" value="giangvien">Giảng viên
+               </div>
+
+            <!-- Nộp form -->
+            <input type="submit">
+            <input type="reset">
+            <!-- Để nộp đi đâu đó: <form method="POST" action> -->
+          </form>
+</body>
+</html>

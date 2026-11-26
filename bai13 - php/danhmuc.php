@@ -63,7 +63,7 @@
                 <td><?php echo $row['ten_the_loai']?></td>
                 <td>
                     <a class="capnhat" href="index.php?page_layout=capnhatdanhmuc&id=<?php echo $row['id']?>">Cập nhật</a>
-                    <a class="xoa" href="xoadanhmuc.php&id=<?php echo $row['id']?>">Xóa</a>
+                    <a class="xoa" href="index.php?page_layout=xoadanhmuc&id=<?php echo $row['id']?>">Xóa</a>
                 </td>
             </tr>
             

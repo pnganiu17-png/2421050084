@@ -74,6 +74,15 @@
             case'capnhatphim':
                 include 'capnhatphim.php';
                 break;
+            case'xoataikhoan':
+                include 'xoataikhoan.php';
+                break;
+            case'xoadanhmuc':
+                include 'xoadanhmuc.php';
+                break;
+            case'xoaphim':
+                include 'xoaphim.php';
+                break;
         }
     ?>
     <?php
