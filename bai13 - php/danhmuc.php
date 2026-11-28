@@ -16,7 +16,7 @@
             text-decoration: none;
         }
         table{
-            width: auto;
+            width: 100%;
             margin-top: 15px;
         }
         tr, th, td{

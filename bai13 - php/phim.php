@@ -54,13 +54,14 @@
         <table>
             <tr>
                 <th>ID</th>
-                <th>Tên phim</th>
+                <th>Tên phim</th>       
                 <th>Quốc gia</th>
                 <th>Đạo diễn</th>
                 <th>Năm</th>
                 <th>Độ tuổi</th>
                 <th>Mô tả</th>
-                <th>Thể loại</th>
+                <th>Trailer</th>
+                <th>Poster</th>
                 <th>Chức năng</th>
             </tr>
 
@@ -77,7 +78,10 @@
                 <td><?php echo $row['nam']?></td>
                 <td><?php echo $row['do_tuoi']?></td>
                 <td><?php echo $row['mo_ta']?></td>
-                <td><?php echo $row['ten_the_loai']?></td>
+                <td><?php echo $row['trailer']?></td>
+                <td>
+                    <img src="<?php echo $row['poster_url']?>">
+                </td>
                 <td>
                     <a class="capnhat" href="index.php?page_layout=capnhatphim&id=<?php echo $row['id']?>">Cập nhật</a>
                     <a class="xoa" href="index.php?page_layout=xoaphim&id=<?php echo $row['id']?>">Xóa</a>
